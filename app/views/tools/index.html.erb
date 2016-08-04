@@ -1,0 +1,8 @@
+<% @tools.each do |tool| %>
+  <%= "Name: #{tool.name}" %> - <%= "Quantity: #{tool.quantity}" %> - <%= "Price: #{tool.price}" %>
+  <%= link_to "Edit", edit_tool_path(tool.id) %>
+  <%= link_to "Delete", tool_path(tool.id), method: :delete %>
+  <br><br>
+<% end %>
+
+<%= link_to "Create New Tool!", new_tool_path %>
